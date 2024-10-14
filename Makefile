@@ -1,7 +1,13 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 NAME = libft.a
-SRCS = ft_isalpha.c
+SRCS = ft_isalnum.c \
+	ft_isalpha.c \
+	ft_isascii.c \
+	ft_isdigit.c \
+	ft_isprint.c \
+	ft_tolower.c \
+	ft_toupper.c
 OBJ_DIR = obj/
 OBJS = $(addprefix $(OBJ_DIR), $(SRCS:.c=.o))
 
