@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpoulain <cpoulain@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/14 18:51:09 by cpoulain          #+#    #+#             */
-/*   Updated: 2024/10/15 15:42:37 by cpoulain         ###   ########.fr       */
+/*   Created: 2024/10/15 16:02:21 by cpoulain          #+#    #+#             */
+/*   Updated: 2024/10/15 16:06:44 by cpoulain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int c)
+size_t	ft_strlen(const char *s)
 {
-	return (c >= ' ' && c <= '~');
+	int	i;
+
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
 }
