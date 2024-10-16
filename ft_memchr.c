@@ -6,7 +6,7 @@
 /*   By: cpoulain <cpoulain@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 13:29:47 by cpoulain          #+#    #+#             */
-/*   Updated: 2024/10/16 13:34:19 by cpoulain         ###   ########.fr       */
+/*   Updated: 2024/10/16 15:33:16 by cpoulain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,11 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char	*str;
-
-	str = (unsigned char *)s;
 	while (n--)
 	{
-		if (*str == (unsigned char) c)
-			return (str);
-		str++;
+		if (*((t_byte *)s) == (t_byte) c)
+			return ((t_byte *)s);
+		s++;
 	}
 	return (NULL);
 }
