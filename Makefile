@@ -11,7 +11,11 @@ SRCS = ft_isalnum.c \
 	ft_strchr.c \
 	ft_strlen.c \
 	ft_strrchr.c \
-	ft_atoi.c
+	ft_atoi.c \
+	ft_strlcpy.c \
+	ft_strlcat.c \
+	ft_strncmp.c \
+	ft_strnstr.c
 OBJ_DIR = obj/
 OBJS = $(addprefix $(OBJ_DIR), $(SRCS:.c=.o))
 
