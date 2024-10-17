@@ -23,7 +23,8 @@ SRCS = ft_isalnum.c \
 	ft_memcpy.c \
 	ft_bzero.c \
 	ft_strdup.c \
-	ft_calloc.c
+	ft_calloc.c \
+	ft_substr.c
 OBJ_DIR = obj/
 OBJS = $(addprefix $(OBJ_DIR), $(SRCS:.c=.o))
 
