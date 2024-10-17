@@ -6,7 +6,7 @@
 /*   By: cpoulain <cpoulain@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 16:13:49 by cpoulain          #+#    #+#             */
-/*   Updated: 2024/10/17 16:36:04 by cpoulain         ###   ########.fr       */
+/*   Updated: 2024/10/17 17:08:59 by cpoulain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 {
-	char			*ans;
+	char			*dst;
 	unsigned int	i;
 
 	i = ft_strlen(s);
-	ans = malloc(i + 1);
-	if (ans)
+	dst = malloc(i + 1);
+	if (dst)
 	{
-		ans[i] = '\0';
+		dst[i] = '\0';
 		while (i--)
-			ans[i] = f(i, *(s + i));
+			dst[i] = f(i, s[i]);
 	}
-	return (ans);
+	return (dst);
 }
