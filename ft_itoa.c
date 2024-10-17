@@ -6,7 +6,7 @@
 /*   By: cpoulain <cpoulain@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 15:00:55 by cpoulain          #+#    #+#             */
-/*   Updated: 2024/10/17 16:06:41 by cpoulain         ###   ########.fr       */
+/*   Updated: 2024/10/17 16:12:00 by cpoulain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,20 +20,17 @@ static void	put_nbr_in_buf(int nbr, int len, char *buf);
 
 static void	put_nbr_in_buf(int nbr, int len, char *buf)
 {
-	long	cpy;
-
-	cpy = nbr;
-	if (cpy < 0)
+	if (nbr < 0)
 	{
-		cpy = -cpy;
+		nbr = -nbr;
 		*buf++ = '-';
 		len--;
 	}
 	buf[len] = '\0';
 	while (len--)
 	{
-		buf[len] = '0' + cpy % 10;
-		cpy /= 10;
+		buf[len] = '0' + (unsigned int)nbr % 10;
+		nbr = (unsigned int)nbr / 10;
 	}
 }
 
