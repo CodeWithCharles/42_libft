@@ -6,7 +6,7 @@
 /*   By: cpoulain <cpoulain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 19:23:04 by cpoulain          #+#    #+#             */
-/*   Updated: 2024/10/18 18:24:56 by cpoulain         ###   ########.fr       */
+/*   Updated: 2024/10/18 20:12:53 by cpoulain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,13 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s != '\0' && *s != (char) c)
-		if (*s++ == (char) c)
-			return ((char *)&s[-1]);
-	return ((char *) NULL);
+	while (*s)
+	{
+		if (*(unsigned char *)s == (unsigned char)c)
+			return ((char *)s);
+		++s;
+	}
+	if (*(unsigned char *)s == (unsigned char)c)
+		return ((char *)s);
+	return (NULL);
 }
