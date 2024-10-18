@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cpoulain <cpoulain@student.42lehavre.fr>   +#+  +:+       +#+        */
+/*   By: cpoulain <cpoulain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 15:57:09 by cpoulain          #+#    #+#             */
-/*   Updated: 2024/10/16 16:05:42 by cpoulain         ###   ########.fr       */
+/*   Updated: 2024/10/18 18:26:01 by cpoulain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,6 @@ char	*ft_strdup(const char *s)
 	s_len = ft_strlen(s);
 	cpy = malloc(sizeof(char) * (s_len + 1));
 	if (cpy)
-		ft_strlcpy(cpy, s, s_len + 1);
+		ft_memcpy(cpy, s, s_len + 1);
 	return (cpy);
 }

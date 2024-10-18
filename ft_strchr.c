@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cpoulain <cpoulain@student.42lehavre.fr>   +#+  +:+       +#+        */
+/*   By: cpoulain <cpoulain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 19:23:04 by cpoulain          #+#    #+#             */
-/*   Updated: 2024/10/15 16:07:01 by cpoulain         ###   ########.fr       */
+/*   Updated: 2024/10/18 18:24:56 by cpoulain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,7 @@
 char	*ft_strchr(const char *s, int c)
 {
 	while (*s != '\0' && *s != (char) c)
-		s++;
-	if (*s == (char) c)
-		return ((char *) s);
+		if (*s++ == (char) c)
+			return ((char *)&s[-1]);
 	return ((char *) NULL);
 }

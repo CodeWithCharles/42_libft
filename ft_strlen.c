@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cpoulain <cpoulain@student.42lehavre.fr>   +#+  +:+       +#+        */
+/*   By: cpoulain <cpoulain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 16:02:21 by cpoulain          #+#    #+#             */
-/*   Updated: 2024/10/15 16:06:44 by cpoulain         ###   ########.fr       */
+/*   Updated: 2024/10/18 18:29:22 by cpoulain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,9 @@
 
 size_t	ft_strlen(const char *s)
 {
-	int	i;
+	const char	*org = s;
 
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
+	while (*s)
+		++s;
+	return (s - org);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cpoulain <cpoulain@student.42lehavre.fr>   +#+  +:+       +#+        */
+/*   By: cpoulain <cpoulain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 17:31:01 by cpoulain          #+#    #+#             */
-/*   Updated: 2024/10/17 17:48:51 by cpoulain         ###   ########.fr       */
+/*   Updated: 2024/10/18 18:16:34 by cpoulain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	ft_putnbr_fd(int n, int fd)
 	if (_n < 0)
 	{
 		ft_putchar_fd('-', fd);
-		_n *= -1;
+		_n = -_n;
 	}
 	_ft_putnbr_fd(_n, fd);
 }
