@@ -6,7 +6,7 @@
 /*   By: cpoulain <cpoulain@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 18:31:31 by cpoulain          #+#    #+#             */
-/*   Updated: 2024/10/18 15:56:09 by cpoulain         ###   ########.fr       */
+/*   Updated: 2024/10/18 16:01:26 by cpoulain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,4 +65,5 @@ void	ft_putnbr_fd(int n, int fd);
 
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
+int		ft_lstsize(t_list *lst);
 #endif
