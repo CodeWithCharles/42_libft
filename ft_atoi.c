@@ -6,7 +6,7 @@
 /*   By: cpoulain <cpoulain@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 16:45:02 by cpoulain          #+#    #+#             */
-/*   Updated: 2024/10/15 16:58:32 by cpoulain         ###   ########.fr       */
+/*   Updated: 2024/10/21 13:08:43 by cpoulain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_atoi(const char *nptr)
 	ans = 0;
 	sign = 1;
 	while (*nptr == '\f' || *nptr == '\n'
-		|| *nptr == '\v' || *nptr == '\t' || *nptr == '\r')
+		|| *nptr == '\v' || *nptr == '\t' || *nptr == '\r' || *nptr == ' ')
 		nptr++;
 	if (*nptr == '+' || *nptr == '-')
 	{
