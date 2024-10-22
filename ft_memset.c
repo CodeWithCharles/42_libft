@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cpoulain <cpoulain@student.42lehavre.fr>   +#+  +:+       +#+        */
+/*   By: cpoulain <cpoulain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 13:36:14 by cpoulain          #+#    #+#             */
-/*   Updated: 2024/10/16 15:32:16 by cpoulain         ###   ########.fr       */
+/*   Updated: 2024/10/22 14:58:44 by cpoulain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 void	*ft_memset(void	*s, int c, size_t n)
 {
 	while (n--)
-		*((t_byte *)s++) = (t_byte) c;
+		((t_byte *)s)[n] = (t_byte) c;
 	return (s);
 }

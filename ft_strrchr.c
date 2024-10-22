@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cpoulain <cpoulain@student.42lehavre.fr>   +#+  +:+       +#+        */
+/*   By: cpoulain <cpoulain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 16:16:25 by cpoulain          #+#    #+#             */
-/*   Updated: 2024/10/15 16:29:45 by cpoulain         ###   ########.fr       */
+/*   Updated: 2024/10/22 14:56:24 by cpoulain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strrchr(const char *s, int c)
 			last = s;
 		s++;
 	}
-	if (c == '\0')
+	if ((char)c == '\0')
 		return ((char *)s);
 	return ((char *)last);
 }
